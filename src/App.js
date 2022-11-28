@@ -68,6 +68,8 @@ const App = () => {
                 <ChangePassword msgAlert={msgAlert} user={user} />
               </RequireAuth>}
           />
+		  
+		
 				</Routes>
 				{msgAlerts.map((msgAlert) => (
 					<AutoDismissAlert
