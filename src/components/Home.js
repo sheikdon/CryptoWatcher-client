@@ -1,5 +1,37 @@
 import axios from "axios"
 import React, { useState, useEffect } from "react"
+import { Container, Card  } from "react-bootstrap"
+
+
+const cardHeader = {
+    fontFamily: 'Bungee Inline',
+}
+
+const cardBody = {
+    width: '100%',
+    height: '100%',
+}
+
+
+
+const boldText = {
+    fontWeight: 'bold'
+}
+
+const cardCSS = {
+    marginTop: '20px',
+    marginBottom: '20px',
+    width: '15rem',
+    height: '19rem',
+    display: 'flex',
+    justifyContent: 'center',
+    textAlign: 'center',
+    borderRadius: '2.5%'
+}
+
+
+
+
 
 const Home = (props) => {
 	// const { msgAlert, user } = props
@@ -18,9 +50,29 @@ const Home = (props) => {
 
 	console.log(data)
 
+	if (!data) return null
+
 	return (
 		<>
-			<h2>Home Page</h2>
+		<h2>Home Page</h2>
+		<div>
+		<Container>
+                <Card style={cardCSS}>
+                <Card.Header style={cardHeader}>
+                    <h3 style={boldText}>{data[0].name}</h3>
+                </Card.Header>
+                <Card.Body>
+                        <div style={cardBody}>
+							<img src={data[0].image} alt=''/>
+                        </div>
+						<div>
+							<h3>{data[0].current_price}</h3>
+						</div>
+                </Card.Body>
+                </Card>
+            </Container>
+		</div>
+			
 		</>
 	)
 }
