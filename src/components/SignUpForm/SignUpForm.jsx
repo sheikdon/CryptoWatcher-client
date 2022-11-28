@@ -11,8 +11,8 @@ export default class SignUpForm extends Component {
     error: ''
   };
 
-  handleSubmit = async (evt) => {
-    evt.preventDefault();
+  handleSubmit = async (e) => {
+    e.preventDefault();
     try {
       const formData = { ...this.state };
       delete formData.confirm;
@@ -30,9 +30,9 @@ export default class SignUpForm extends Component {
     }
   }
 
-  handleChange = (evt) => {
+  handleChange = (e) => {
     this.setState({
-      [evt.target.name]: evt.target.value,
+      [e.target.name]: e.target.value,
       error: ''
     });
   }
