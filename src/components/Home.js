@@ -8,8 +8,8 @@ const cardHeader = {
 }
 
 const cardBody = {
-    width: '100%',
-    height: '100%',
+    width: '50%',
+    height: '50%',
 }
 
 
@@ -71,6 +71,67 @@ const Home = (props) => {
                 </Card.Body>
                 </Card>
             </Container>
+		<Container>
+                <Card style={cardCSS}>
+                <Card.Header style={cardHeader}>
+                    <h3 style={boldText}>{data[1].name}</h3>
+                </Card.Header>
+                <Card.Body>
+                        <div style={cardBody}>
+							<img src={data[1].image} alt=''/>
+                        </div>
+						<div>
+							<h3>{data[1].current_price}</h3>
+						</div>
+                </Card.Body>
+                </Card>
+            </Container>
+		<Container>
+                <Card style={cardCSS}>
+                <Card.Header style={cardHeader}>
+                    <h3 style={boldText}>{data[2].name}</h3>
+                </Card.Header>
+                <Card.Body>
+                        <div style={cardBody}>
+							<img src={data[2].image} alt=''/>
+                        </div>
+						<div>
+							<h3>{data[2].current_price}</h3>
+						</div>
+                </Card.Body>
+                </Card>
+            </Container>
+		<Container>
+                <Card style={cardCSS}>
+                <Card.Header style={cardHeader}>
+                    <h3 style={boldText}>{data[3].name}</h3>
+                </Card.Header>
+                <Card.Body>
+                        <div style={cardBody}>
+							<img src={data[3].image} alt=''/>
+                        </div>
+						<div>
+							<h3>{data[3].current_price}</h3>
+						</div>
+                </Card.Body>
+                </Card>
+            </Container>
+		<Container>
+                <Card style={cardCSS}>
+                <Card.Header style={cardHeader}>
+                    <h3 style={boldText}>{data[4].name}</h3>
+                </Card.Header>
+                <Card.Body>
+                        <div style={cardBody}>
+							<img src={data[4].image} alt=''/>
+                        </div>
+						<div>
+							<h3>{data[4].current_price}</h3>
+						</div>
+                </Card.Body>
+                </Card>
+            </Container>
+		
 		</div>
 			
 		</>
