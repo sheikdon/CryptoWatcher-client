@@ -29,6 +29,10 @@ const cardCSS = {
     borderRadius: '2.5%'
 }
 
+const backColor = {
+	backgroundColor: 'rgb(32, 30, 31)'
+}
+
 
 
 
@@ -55,7 +59,7 @@ const Home = (props) => {
 	return (
 		<>
 		<h2>Home Page</h2>
-		<div>
+		<div style={backColor}>
 		<Container>
                 <Card style={cardCSS}>
                 <Card.Header style={cardHeader}>
