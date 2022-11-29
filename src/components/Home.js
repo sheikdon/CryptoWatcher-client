@@ -1,6 +1,9 @@
 import axios from "axios"
 import React, { useState, useEffect } from "react"
 import { Container, Card  } from "react-bootstrap"
+import CoinShow from "./coin/CoinShow"
+// import SignUpForm from "./SignUpForm/SignUpForm"
+// import Search from "./Search/Search"
 
 
 const cardHeader = {
@@ -59,6 +62,7 @@ const Home = (props) => {
 	return (
 		<>
 		<h2>Home Page</h2>
+        {/* < Search /> */}
 		<div style={backColor}>
 		<Container>
                 <Card style={cardCSS}>

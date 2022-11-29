@@ -3,13 +3,14 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './WatchList.css'
 import axios from "axios"
+import CoinShow from '../coin/CoinShow';
 
 
 const WatchList = (props) => {
   console.log('props in home', props)
 	const [data, setData] = useState(null)
 
-  const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=20&page=1&sparkline=false'
+  const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=5&page=1&sparkline=false'
 
   
 
@@ -23,7 +24,7 @@ const WatchList = (props) => {
 		}).catch((error) => {
 		console.log(error)
 		})
-	}, [refresh])
+	}, [])
 
 	console.log(data)
 
@@ -46,31 +47,21 @@ const WatchList = (props) => {
 // }
   
   return (
-  
-        <Link to={`/${data.id}`} className='coin-line' >
+    <>
+    <CoinShow />
+        <Link to={`/${data[0].id}`} className='coin-line' >
           {/*data 6  */}
-        <p>{data[6].market_cap_rank}</p>
+        <p>{data[0].market_cap_rank}</p>
         <div className='img-symbol' >
-          <img src={data[6].image} alt='' />
-          <p>{data[6].symbol}</p>
+          <img src={data[0].image} alt='' />
+          <p>{data[0].symbol}</p>
         </div>
-        <p>{data[6].current_price}</p>
-        <p>{data[6].price_change_percentage_24h}</p>
-        <p>{data[6].total_volume}</p>
-        <p>{data[6].market_cap}</p>
-      {/* data 7 */}
-      
-      <p>{data[7].market_cap_rank}</p>
-        <div className='img-symbol' >
-          <img src={data[7].image} alt='' />
-          <p>{data[7].symbol}</p>
-        </div>
-        <p>{data[7].current_price}</p>
-        <p>{data[7].price_change_percentage_24h}</p>
-        <p>{data[7].total_volume}</p>
-        <p>{data[7].market_cap}</p>
+        <p>{data[0].current_price}</p>
+        <p>{data[0].price_change_percentage_24h}</p>
+        <p>{data[0].total_volume}</p>
+        <p>{data[0].market_cap}</p>
         </Link>
-    
+        </>
   )
 }
 
