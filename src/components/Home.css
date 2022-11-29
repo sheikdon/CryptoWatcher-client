@@ -1,0 +1,16 @@
+Container{
+justify-content: space-between;
+
+}
+.Header{
+    text-align: center;
+    justify-content: center;
+    margin:100px ;
+    
+}
+card-img-center {
+    height: 100px;
+    width: 10px;
+    opacity: unset;
+    align-items: center;
+}
