@@ -12,6 +12,10 @@ import SignUp from './components/auth/SignUp'
 import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
+import WatchList from './components/WatchList/WatchList'
+import { coinIndex } from './api/coin'
+import CoinDetails from './components/coin/CoinDetails'
+
 
 const App = () => {
 
@@ -68,6 +72,9 @@ const App = () => {
                 <ChangePassword msgAlert={msgAlert} user={user} />
               </RequireAuth>}
           />
+		<Route path="/WatchList" element={<WatchList WatchList={WatchList} />} />
+		<Route path="/:id" element={<CoinDetails coins={CoinDetails} />} />
+
 		  
 		
 				</Routes>

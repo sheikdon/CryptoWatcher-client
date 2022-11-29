@@ -1,6 +1,6 @@
 import { Component } from 'react';
-import { signUp } from '../../utilities/users-service';
-import './SignUpForm.css'
+// import { signUp } from '../../utilities/users-service';
+// import './SignUpForm.css'
 
 export default class SignUpForm extends Component {
   state = {
@@ -19,9 +19,9 @@ export default class SignUpForm extends Component {
       delete formData.error;
       // The promise returned by the signUp service method
       // will resolve to the user object included in the
-      const user = await signUp(formData);
+    //   const user = await signUp(formData);
       // Update user state with user
-      this.props.setUser(user);
+    //   this.props.setUser(user);
     } catch {
       // Invalid signup
       this.setState({
