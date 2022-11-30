@@ -12,6 +12,9 @@ import SignUp from './components/auth/SignUp'
 import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
+import CoinShow from './components/coin/CoinShow'
+import CoinSearch from './components/coin/CoinSearch'
+import CoinIndex from './components/coin/CoinIndex'
 
 const App = () => {
 
@@ -68,7 +71,24 @@ const App = () => {
                 <ChangePassword msgAlert={msgAlert} user={user} />
               </RequireAuth>}
           />
-		  
+		  <Route
+            path='/coins'
+            element={
+                <CoinIndex msgAlert={msgAlert} user={user} setUser={setUser} />
+              }
+        />
+		  <Route
+            path='/coins/:id'
+            element={
+                <CoinShow msgAlert={msgAlert} user={user} setUser={setUser} />
+              }
+        />
+		<Route
+            path='/coins/search/:name'
+            element={
+                <CoinSearch msgAlert={msgAlert} user={user} />
+              }
+        />
 		
 				</Routes>
 				{msgAlerts.map((msgAlert) => (
