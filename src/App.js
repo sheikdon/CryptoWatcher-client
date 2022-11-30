@@ -73,7 +73,7 @@ const App = () => {
               </RequireAuth>}
           />
 		<Route path="/WatchList" element={<WatchList WatchList={WatchList} />} />
-		<Route path="/:id" element={<CoinDetails coins={CoinDetails} />} />
+		{/* <Route path="/:id" element={<CoinDetails coins={CoinDetails} />} /> */}
 
 		  
 		

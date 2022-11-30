@@ -1,0 +1,78 @@
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 12px #18191b;
+    border-radius: 8px;
+    margin: 30px 10px;
+    padding: 10px 10px;
+    font-weight: 700;
+}
+
+.coin-name {
+    margin-left: -20px;
+    text-transform:uppercase;
+}
+
+.coin-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 12px #18191b;
+    border-radius: 8px;
+    margin: 16px 8px;
+    padding: 5px 8px;
+}
+
+.coin-line:hover {
+    transform: scale(1.04);
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+img {
+    height: 40px;
+    width: auto;
+    opacity: unset;
+    align-items: center;
+}
+
+.img-symbol {
+    display: flex;
+    align-items: center;
+}
+
+.animate {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+.one {
+    -webkit-animation-delay: 0.5s;
+    -moz-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+  }
+  
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  .fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+  }
+
+  .divBox {
+    margin-right: 200px;
+    margin-left: 200px;
+  }

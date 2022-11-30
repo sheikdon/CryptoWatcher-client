@@ -49,7 +49,7 @@ const alwaysOptions = (
 		<>
 		<Nav.Link>
 			<Link to='/WatchList' style={linkStyle}>
-				WatchList
+				Trending
 			</Link>
 		</Nav.Link>
 	</>
