@@ -91,7 +91,7 @@
 //     )
 
 import axios from 'axios'
-import WatchList from '../Watchlist/WatchList'
+import WatchList from '../WatchList/WatchList'
 import './CoinShow.css'
 import React, { useState, useEffect } from "react"
 
