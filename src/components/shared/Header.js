@@ -49,7 +49,7 @@ const alwaysOptions = (
 		<>
 		<Nav.Link>
 			<Link to='/WatchList' style={linkStyle}>
-				WatchList
+				Trending
 			</Link>
 		</Nav.Link>
 	</>
@@ -60,7 +60,7 @@ const Header = ({ user }) => (
 	<Navbar style={ navColor } variant='dark' expand='md'>
 		<Navbar.Brand>
             <Link to='/' style={linkStyle}>
-			<img src="https://images.axios.com/3HFhZNXBvnujn16bjk28r6MBU3k=/448x0:1528x1080/1366x1366/2022/11/09/1668032836033.jpg" />
+				Crypto Watcher
             </Link>
         </Navbar.Brand>
 		<Navbar.Toggle aria-controls='basic-navbar-nav' />
