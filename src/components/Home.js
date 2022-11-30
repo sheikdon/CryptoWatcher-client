@@ -47,7 +47,7 @@ const Home = (props) => {
 	console.log('props in home', props)
 	const [data, setData] = useState(null)
 
-	const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=5&page=1&sparkline=false'
+	const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=8&page=1&sparkline=false'
 
 	useEffect(() =>{
 		axios.get(url).then((response) => {
@@ -80,7 +80,7 @@ const Home = (props) => {
                 <div className="divBox">
                     <div className="heading">
                         <div>
-                            <h1 className="home-sub">Community Favorites</h1>
+                            <h1 className="home-sub">Cryptocurrency Prices by Market Cap</h1>
                         </div>
                     </div>
                 </div>
@@ -106,8 +106,8 @@ const Home = (props) => {
   <div class="card-body">
     <h5 class="card-title"style={boldText}>#{data[1].market_cap_rank}: {data[1].name}</h5>
     <p class="card-text">
-    <h3>Current Price: {data[1].current_price}</h3>
-      <p>Market Cap: {data[1].market_cap}</p>
+    <h3>Current Price: ${data[1].current_price}</h3>
+      <p>Market Cap: ${data[1].market_cap}</p>
     </p>
   </div>
 </div>
@@ -117,8 +117,63 @@ const Home = (props) => {
   <div class="card-body">
     <h5 class="card-title"style={boldText}>#{data[2].market_cap_rank}: {data[2].name}</h5>
     <p class="card-text">
-    <h3>Current Price: {data[2].current_price}</h3>
-      <p>Market Cap: {data[2].market_cap}</p>
+    <h3>Current Price: ${data[2].current_price}</h3>
+      <p>Market Cap: ${data[2].market_cap}</p>
+    </p>
+  </div>
+</div>
+<div class="coin-line">
+  <img src={data[3].image} class="img-symbol" alt="..."/>
+  <p>{data[3].symbol}</p>
+  <div class="card-body">
+    <h5 class="card-title"style={boldText}>#{data[3].market_cap_rank}: {data[3].name}</h5>
+    <p class="card-text">
+    <h3>Current Price: ${data[3].current_price}</h3>
+      <p>Market Cap: ${data[3].market_cap}</p>
+    </p>
+  </div>
+</div>
+<div class="coin-line">
+  <img src={data[4].image} class="img-symbol" alt="..."/>
+  <p>{data[4].symbol}</p>
+  <div class="card-body">
+    <h5 class="card-title"style={boldText}>#{data[4].market_cap_rank}: {data[4].name}</h5>
+    <p class="card-text">
+    <h3>Current Price: ${data[4].current_price}</h3>
+      <p>Market Cap: ${data[4].market_cap}</p>
+    </p>
+  </div>
+</div>
+<div class="coin-line">
+  <img src={data[5].image} class="img-symbol" alt="..."/>
+  <p>{data[5].symbol}</p>
+  <div class="card-body">
+    <h5 class="card-title"style={boldText}>#{data[5].market_cap_rank}: {data[5].name}</h5>
+    <p class="card-text">
+    <h3>Current Price: ${data[5].current_price}</h3>
+      <p>Market Cap: ${data[5].market_cap}</p>
+    </p>
+  </div>
+</div>
+<div class="coin-line">
+  <img src={data[6].image} class="img-symbol" alt="..."/>
+  <p>{data[6].symbol}</p>
+  <div class="card-body">
+    <h5 class="card-title"style={boldText}>#{data[6].market_cap_rank}: {data[6].name}</h5>
+    <p class="card-text">
+    <h3>Current Price: ${data[6].current_price}</h3>
+      <p>Market Cap: ${data[6].market_cap}</p>
+    </p>
+  </div>
+</div>
+<div class="coin-line">
+  <img src={data[7].image} class="img-symbol" alt="..."/>
+  <p>{data[7].symbol}</p>
+  <div class="card-body">
+    <h5 class="card-title"style={boldText}>#{data[7].market_cap_rank}: {data[7].name}</h5>
+    <p class="card-text">
+    <h3>Current Price: ${data[7].current_price}</h3>
+      <p>Market Cap: ${data[7].market_cap}</p>
     </p>
   </div>
 </div>
