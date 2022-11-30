@@ -1,4 +1,5 @@
-import React, {useState, useEffect} from "react";
+import React, { useEffect, useState} from "react";
+import { useParams, useNavigate } from 'react-router-dom'
 import axios from "axios";
 import CoinShow from "./CoinShow";
 import { coinIndex } from "../../api/coin"
@@ -12,13 +13,16 @@ const CoinIndex = ( user, msgAlert) => {
     useEffect(() => {
         coinIndex(user)
         .then(res => {
-            setAllCoins(res.data.coins)
+            console.log(res.data,'this is the name in coinindex')
+            setAllCoins(res.data)
         })
         .catch((error) => {
 
         })
     }, [])
-
+    if (!allCoins){
+        return null
+    }
 
     const coinCards = allCoins.map(coin => (
         <Card key={ coin.id } style={{ width: '30%', margin: 5 }}>

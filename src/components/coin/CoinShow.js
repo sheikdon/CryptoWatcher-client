@@ -5,7 +5,14 @@ import React, { useEffect, useState } from 'react'
 import { Container, Card} from 'react-bootstrap'
 import {  coinShow } from '../../api/coin'
 
+const imageDisplay = {
+    width: '50%',
+    height: '50%'
+}
 
+const cardStyle = {
+    width: '30%'
+}
 
 const CoinShow = (user, msgAlert, setAlert) => {
     const [coin, setCoin] = useState(null)
@@ -33,8 +40,12 @@ const CoinShow = (user, msgAlert, setAlert) => {
     return (
         <>
 			<Container>
-                <Card>
-                <Card.Header><p>{coin.name}</p></Card.Header>
+                <Card style={cardStyle}>
+                <Card.Header><p>{coin.name}</p></Card.Header> 
+                <Card.Img variant="top" src={coin.image.small} style={imageDisplay} />
+                <hr></hr>
+                <Card.Body><p>{coin.description.en}</p></Card.Body>
+              
                 </Card>
             </Container>
         </>
