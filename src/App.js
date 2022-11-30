@@ -15,7 +15,9 @@ import ChangePassword from './components/auth/ChangePassword'
 import CoinShow from './components/coin/CoinShow'
 import CoinSearch from './components/coin/CoinSearch'
 import CoinIndex from './components/coin/CoinIndex'
-
+// import WatchList from './components/WatchList/WatchList'
+// import { coinIndex } from './api/coin'
+// import CoinDetails from './components/coin/CoinDetails'
 const App = () => {
 
   const [user, setUser] = useState(null)
@@ -89,6 +91,9 @@ const App = () => {
                 <CoinSearch msgAlert={msgAlert} user={user} />
               }
         />
+		{/* <Route path="/WatchList" element={<WatchList WatchList={WatchList} />} /> */}
+		{/* <Route path="/:id" element={<CoinDetails coins={CoinDetails} />} /> */}
+
 		
 				</Routes>
 				{msgAlerts.map((msgAlert) => (

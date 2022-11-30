@@ -63,6 +63,13 @@ const alwaysOptions = (
 				Home
 			</Link>
 		</Nav.Link>
+		<>
+		<Nav.Link>
+			<Link to='/WatchList' style={linkStyle}>
+				Trending
+			</Link>
+		</Nav.Link>
+	</>
 	</>
 )
 
@@ -70,7 +77,7 @@ const Header = ({ user }) => (
 	<Navbar style={ navColor } variant='dark' expand='md'>
 		<Navbar.Brand >
             <Link to='/' style={linkStyle}>
-                CryptoWatcher
+				Crypto Watcher
             </Link>
         </Navbar.Brand>
 		<Navbar.Toggle aria-controls='basic-navbar-nav' />

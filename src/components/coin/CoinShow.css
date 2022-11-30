@@ -1,3 +1,11 @@
+/* .container {
+    max-width: 1140px;
+    margin: auto;
+    background-color: black;
+    height: 20px;
+    width: 100px;
+} */
+
 .heading {
     display: flex;
     justify-content: space-between;
@@ -11,7 +19,6 @@
 
 .coin-name {
     margin-left: -20px;
-    text-transform:uppercase;
 }
 
 .coin-line {

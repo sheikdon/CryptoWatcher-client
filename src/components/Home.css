@@ -1,3 +1,19 @@
+Container{
+justify-content: space-between;
+
+}
+.Header{
+    text-align: center;
+    justify-content: center;
+    margin:100px ;
+    
+}
+card-img-center {
+    height: 100px;
+    width: 10px;
+    opacity: unset;
+    align-items: center;
+}
 .heading {
     display: flex;
     justify-content: space-between;
@@ -11,7 +27,10 @@
 
 .coin-name {
     margin-left: -20px;
-    text-transform:uppercase;
+}
+.home-sub {
+    text-align: center;
+    text-transform: capitalize;
 }
 
 .coin-line {
@@ -31,7 +50,7 @@
 }
 
 img {
-    height: 40px;
+    height: 70px;
     width: auto;
     opacity: unset;
     align-items: center;
