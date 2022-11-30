@@ -101,7 +101,7 @@ const Home = (props) => {
   </div>
       </p>
   </div>
-  <button className="fluid" onClick={() => navigate(`/coins/${id}`)}>{data[0].id}</button>
+  <button className="fluid" onClick={() => navigate(`/coins/${data[0].id}`)}>{data[0].id}</button>
 </div>
 <div class="coin-line">
   <img src={data[1].image} class="img-symbol" alt="..."/>

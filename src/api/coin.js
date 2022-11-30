@@ -21,34 +21,20 @@ export const coinCreate = (data, user) => {
 export const coinIndex = (user) => {
 	return axios({
 		method: 'GET',
-		url: apiUrl + '/coins'
-	})
-}
-
-// coin index search results
-export const coinSearchResults = (user, name) => {
-	return axios({
-		method: 'GET',
-		url: apiUrl + '/coins/' + name
+		url: apiUrl + '/coins',
+        headers: {
+			Authorization: `Token token=${user.token}`,
+		}
 	})
 }
 
 // coin show
-export const coinShow = (user, id) => {
+export const coinShow = (user, apiId) => {
 	return axios({
 		method: 'GET',
-		url: apiUrl + '/coins/' + id
+		url: "https://api.coingecko.com/api/v3" + '/coins/' + apiId
 	})
 }
-
-// local coin show
-export const localCoinShow = (user, id) => {
-	return axios({
-		method: 'GET',
-		url: apiUrl + '/coins/watchlist/' + id
-	})
-}
-
 
 
 // game delete
