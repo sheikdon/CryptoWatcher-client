@@ -5,19 +5,17 @@ import { useNavigate } from 'react-router-dom'
 import CoinShow from "./coin/CoinShow"
 import useAxios from '../hooks/useAxios';
 import { coinIndex } from "../api/coin";
-
+// import SignUpForm from "./SignUpForm/SignUpForm"
+// import Search from "./Search/Search"
 
 
 const cardHeader = {
     fontFamily: 'Bungee Inline',
-	display: 'flex'
 }
 
 const cardBody = {
     width: '50%',
     height: '50%',
-	display: 'flex',
-	flexFlow: 'row wrap'
 }
 
 
@@ -27,23 +25,18 @@ const boldText = {
 }
 
 const cardCSS = {
-    marginTop: '50px',
-    marginBottom: '50px',
+    marginTop: '20px',
+    marginBottom: '20px',
     width: '15rem',
-    height: '18rem',
+    height: '19rem',
     display: 'flex',
     justifyContent: 'center',
     textAlign: 'center',
     borderRadius: '2.5%'
 }
 
-
-const cardContainerLayout = {
-    display: 'flex',
-    flexDirection: 'row ',
-    justifyContent: 'center',
-	
-	
+const backColor = {
+	backgroundColor: 'rgb(32, 30, 31)'
 }
 
 
@@ -51,11 +44,13 @@ const cardContainerLayout = {
 
 
 const Home = (props) => {
-	const [data, setData] = useState(null)
-
+	// const { msgAlert, user } = props
 	const { name, image, id } = props
+	const [data, setData] = useState(null)
 	const navigate = useNavigate()
-	const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=5&page=1&sparkline=false'
+
+	const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=8&page=1&sparkline=false'
+
 	useEffect(() =>{
 		axios.get(url).then((response) => {
 			setData(response.data)
@@ -67,7 +62,6 @@ const Home = (props) => {
 	console.log(data)
 
 	if (!data) return null
-	
 
 	return (
 		<>
@@ -107,6 +101,7 @@ const Home = (props) => {
   </div>
       </p>
   </div>
+  <button className="fluid" onClick={() => navigate(`/coins/${id}`)}>{data[0].id}</button>
 </div>
 <div class="coin-line">
   <img src={data[1].image} class="img-symbol" alt="..."/>
@@ -193,6 +188,7 @@ const Home = (props) => {
 <footer>Made By Abdiresac Sheikdon and Abdiaziz Sheikh</footer>			
 
 </>
+
 	)
 }
 
