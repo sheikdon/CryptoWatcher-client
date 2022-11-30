@@ -8,11 +8,18 @@ const CoinShow = (props) => {
 
   return (
 <>
+<div className="box animate fadeInUp one">
+<div className='divBox'>
+<div className='head'>
     <h2>Trending Coins</h2>
+    </div>
+    </div>
+    </div>
     <div className="box animate fadeInUp one">
         <div className='divBox'>
             <div className='heading'>
                 <p>#</p>
+                <p>Market Cap Ranking</p>
                 <p className='coin-name' >Coin</p>
                 <p>Name</p>
                 <p>Price</p>

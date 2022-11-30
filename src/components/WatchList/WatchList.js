@@ -37,6 +37,7 @@ const WatchList = (props) => {
       <div className='coin-line'>      
       <Link to={`/${coin.item.id}`} >
       </Link>
+      <p>{coin.item.score}</p>
       <p>#{coin.item.market_cap_rank}</p>
       <div className='img-symbol' >
         <img src={coin.item.small} alt='' />

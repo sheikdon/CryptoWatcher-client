@@ -17,6 +17,11 @@
     font-weight: 700;
 }
 
+.head {
+  
+  text-align: center;
+}
+
 .coin-name {
     margin-left: -20px;
 }
