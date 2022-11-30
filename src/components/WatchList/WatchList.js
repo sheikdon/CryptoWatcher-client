@@ -53,15 +53,6 @@ const WatchList = (props) => {
     <>
     < CoinShow/>
     {data.length > 0 ?  showCoins()  : <></>}
-        {/* <p>{coin.item.market_cap_rank}</p>
-        <div className='img-symbol' >
-          <img src={coin.item.image} alt='' />
-          <p>{coin.symbol}</p>
-        </div>
-        <p>{coin.item.current_price}</p>
-        <p>{coin.price_change_percentage_24h}</p>
-        <p>{coin.total_volume}</p>
-        <p>{coin.market_cap}</p> */}
         </>
   )
 }
