@@ -2,7 +2,7 @@ import axios from "axios"
 import React, { useState, useEffect } from "react"
 import { Container, Card  } from "react-bootstrap"
 import { useNavigate } from 'react-router-dom'
-import CoinShow from "./coin/CoinShow"
+import Trending from "./coin/Trending"
 import useAxios from '../hooks/useAxios';
 import { coinIndex } from "../api/coin";
 // import SignUpForm from "./SignUpForm/SignUpForm"

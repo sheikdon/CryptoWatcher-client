@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './WatchList.css'
 import axios from "axios"
-import CoinShow from '../coin/CoinShow';
+import Trending from '../coin/Trending';
 
 
 const WatchList = (props) => {
@@ -51,7 +51,7 @@ const WatchList = (props) => {
   
   return (
     <>
-    < CoinShow/>
+    < Trending/>
     {data.length > 0 ?  showCoins()  : <></>}
         {/* <p>{coin.item.market_cap_rank}</p>
         <div className='img-symbol' >

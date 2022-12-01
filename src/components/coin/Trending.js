@@ -92,11 +92,11 @@
 
 import axios from 'axios'
 import WatchList from '../WatchList/WatchList'
-import './CoinShow.css'
+import './Trending.css'
 import React, { useState, useEffect } from "react"
 
 
-const CoinShow = (props) => {
+const Trending = (props) => {
 
   return (
 <>
@@ -125,4 +125,4 @@ const CoinShow = (props) => {
 
 }
 
-export default CoinShow
+export default Trending
