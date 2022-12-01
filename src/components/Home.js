@@ -69,9 +69,10 @@ const Home = (props) => {
         <div className="box animate fadeInUp one">
         <div className="divBox">
             <div className="heading">
-                <h2>Crypto Watcher</h2>
-                <br /> 
-                <p>CryptoWatcher is a cryptocurrency tracking app that allows you to keep track of all your coins.<br/> You can add and delete any coins you wish to add to your watch list. You can also comment on coins to help your cryptos buddies.</p>
+                {/* <h2>Crypto Watcher</h2> */}
+                <div className="divBox">
+                  <p>CryptoWatcher is a cryptocurrency tracking app that allows you to keep track of all your coins.<br/> You can add and delete any coins you wish to add to your watch list. You can also comment on coins to help your cryptos buddies.</p>
+                </div>
             <div>    
             </div>
             </div>
@@ -82,13 +83,13 @@ const Home = (props) => {
                 <div className="divBox">
                     <div className="heading">
                         <div>
-                            <h1 className="home-sub">Cryptocurrency Prices by Market Cap</h1>
+                            <h1 className="coin-line">Top Leading Cryptocurrencies</h1>
                         </div>
                     </div>
                 </div>
         </div>
         </Container>
-        <div class="card-group">
+        <div className="box animate fadeInUp one">
 <div class="coin-line">
   <img src={data[0].image} class="img-symbol" alt="..."/>
   <p>{data[0].symbol}</p>

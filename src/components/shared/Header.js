@@ -59,7 +59,7 @@ const unauthenticatedOptions = (
 const alwaysOptions = (
 	<>
 		<Nav.Link>
-			<Link to='/' style={linkStyle}>
+			<Link to='/' style={linkStyle} >
 				Home
 			</Link>
 		</Nav.Link>
@@ -67,6 +67,11 @@ const alwaysOptions = (
 		<Nav.Link>
 			<Link to='/WatchList' style={linkStyle}>
 				Trending
+			</Link>
+		</Nav.Link>
+		<Nav.Link>
+			<Link to='/CoinSearch' style={linkStyle}>
+				Search Coins
 			</Link>
 		</Nav.Link>
 	</>

@@ -45,7 +45,7 @@ export const coinShow = (user, id) => {
 export const localCoinShow = (user, id) => {
 	return axios({
 		method: 'GET',
-		url: apiUrl + '/coins/watchlist/' + id
+		url: apiUrl + '/coins/WatchList/' + id
 	})
 }
 

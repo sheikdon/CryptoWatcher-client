@@ -100,21 +100,24 @@ const CoinShow = (props) => {
 
   return (
 <>
-    <h2>Trending Coins</h2>
+<div className="box animate fadeInUp one">
+    <div className='divBox'>
+      <div className='heading'>
+        <div className='divBox2'>
+          <h2>Trending</h2>
+        </div>
+      </div>
+    </div>
+</div>
     <div className="box animate fadeInUp one">
         <div className='divBox'>
             <div className='heading'>
-                <p>#</p>
+                  
+                <p># Ranking</p>
                 <p className='coin-name' >Coin</p>
                 <p>Name</p>
-                <p>Price</p>
+                <p>Price (in Bitcoin)</p>
             </div>
-            {/* {props.coins.map(coins => {
-              return (
-                <WatchList coins={coins} key={coins.id} />
-              )
-            })} */}
-
         </div>
     </div>
 </>

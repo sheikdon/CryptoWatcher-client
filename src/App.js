@@ -16,6 +16,7 @@ import CoinShow from './components/coin/CoinShow'
 import CoinSearch from './components/coin/CoinSearch'
 import CoinIndex from './components/coin/CoinIndex'
 import WatchList from './components/WatchList/WatchList'
+import CoinDetails from './components/coin/CoinDetails'
 // import { coinIndex } from './api/coin'
 // import CoinDetails from './components/coin/CoinDetails'
 const App = () => {
@@ -82,7 +83,7 @@ const App = () => {
 		  <Route
             path='/coins/:id'
             element={
-                <CoinShow msgAlert={msgAlert} user={user} setUser={setUser} />
+                <CoinShow msgAlert={msgAlert} user={user} setUser={setUser} element={<CoinShow CoinShow={CoinShow} />} />
               }
         />
 		<Route
