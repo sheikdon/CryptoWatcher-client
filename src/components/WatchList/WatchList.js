@@ -33,7 +33,8 @@ const WatchList = (props) => {
 
   const showCoins = () => {
     return data.map(coin => (
-       <>  
+       <> 
+      <div className="box animate fadeInUp one">
       <div className='coin-line'>      
       <Link to={`/${coin.item.id}`} >
       </Link>
@@ -45,6 +46,7 @@ const WatchList = (props) => {
      <p className='coin-name'>{coin.item.slug}</p>
       <p>{coin.item.price_btc} BTC</p>
     </div>
+    </div> 
       </>
     ))
 }
