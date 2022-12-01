@@ -69,9 +69,7 @@ const Home = (props) => {
         <div className="box animate fadeInUp one">
                 <div className="divBox">
                     <div className="heading">
-                        <div>
-                            <h1 className="Heading" style={boldText}>Top Leading Cryptocurrencies</h1>
-                        </div>
+                       <h1 className="title" style={boldText}>Top Leading Cryptocurrencies</h1>
                     </div>
                 </div>
         </div>
