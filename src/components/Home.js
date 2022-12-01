@@ -67,6 +67,15 @@ const Home = (props) => {
 		<>
         <Container>
         <div className="box animate fadeInUp one">
+                <div className="divBox">
+                    <div className="heading">
+                        <div>
+                            <h1 className="Heading" style={boldText}>Top Leading Cryptocurrencies</h1>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div className="box animate fadeInUp one">
         <div className="divBox">
             <div className="heading">
                 {/* <h2>Crypto Watcher</h2> */}
@@ -77,16 +86,6 @@ const Home = (props) => {
             </div>
             </div>
         </div>
-        </div>
-        
-        <div className="box animate fadeInUp one">
-                <div className="divBox">
-                    <div className="heading">
-                        <div>
-                            <h1 className="Heading" style={boldText}>Top Leading Cryptocurrencies</h1>
-                        </div>
-                    </div>
-                </div>
         </div>
         </Container>
         <div className="box animate fadeInUp one">
