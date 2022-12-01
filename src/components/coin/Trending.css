@@ -5,7 +5,6 @@
     height: 20px;
     width: 100px;
 } */
-
 .heading {
     display: flex;
     justify-content: space-between;
@@ -82,4 +81,8 @@ img {
   .divBox {
     margin-right: 200px;
     margin-left: 200px;
+  }
+  .divBox2 {
+    margin-right:400px;
+    margin-left:400px ;
   }

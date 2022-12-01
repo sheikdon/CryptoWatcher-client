@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './WatchList.css'
 import axios from "axios"
-import CoinShow from '../coin/CoinShow';
+import Trending from '../coin/Trending';
 
 
 const WatchList = (props) => {
@@ -33,7 +33,9 @@ const WatchList = (props) => {
 
   const showCoins = () => {
     return data.map(coin => (
-       <>  
+       <> 
+      <div className='color'>
+      <div className="box animate fadeInUp one">
       <div className='coin-line'>      
       <Link to={`/${coin.item.id}`} >
       </Link>
@@ -45,13 +47,15 @@ const WatchList = (props) => {
      <p className='coin-name'>{coin.item.slug}</p>
       <p>{coin.item.price_btc} BTC</p>
     </div>
+    </div> 
+    </div>
       </>
     ))
 }
   
   return (
     <>
-    < CoinShow/>
+    < Trending/>
     {data.length > 0 ?  showCoins()  : <></>}
         {/* <p>{coin.item.market_cap_rank}</p>
         <div className='img-symbol' >

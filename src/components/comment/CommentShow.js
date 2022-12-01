@@ -31,7 +31,12 @@ const ShowComment = (props) => {
                 <Card.Body>
                    { comment.comment } 
            
-                            <>
+                            
+                  
+         
+                </Card.Body>
+                <Card.Footer>
+                  <>
                                 <Button
                                     className="m-2"
                                     variant="warning"
@@ -47,11 +52,6 @@ const ShowComment = (props) => {
                                     Delete Comment
                                 </Button>
                             </>
-                  
-         
-                </Card.Body>
-                <Card.Footer>
-                  
                 </Card.Footer>
             </Card>
             <EditCommentModal

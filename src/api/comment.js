@@ -29,7 +29,7 @@ export const createComment = (user, coinId, newComment) => {
 // UPDATE comment
 export const updateComment = (user, updatedComment) => {
 	return axios({
-		url: `${apiUrl}/comments/${updatedComment._id}`,
+		url: `${apiUrl}/comments/${updatedComment.id}`,
 		method: 'PATCH',
 		headers: {
 			Authorization: `Token token=${user.user.token}`,

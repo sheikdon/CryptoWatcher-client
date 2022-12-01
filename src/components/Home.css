@@ -16,13 +16,18 @@ card-img-center {
 }
 .heading {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     box-shadow: 0px 0px 12px #18191b;
     border-radius: 8px;
     margin: 30px 10px;
-    padding: 10px 10px;
+    padding-left: 20px;
     font-weight: 700;
+}
+.title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 .coin-name {
@@ -94,4 +99,8 @@ img {
   .divBox {
     margin-right: 200px;
     margin-left: 200px;
+  }
+  .divBox2 {
+    margin-right:200px;
+    margin-left:200px ;
   }

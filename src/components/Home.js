@@ -2,7 +2,7 @@ import axios from "axios"
 import React, { useState, useEffect } from "react"
 import { Container, Card  } from "react-bootstrap"
 import { useNavigate } from 'react-router-dom'
-import CoinShow from "./coin/CoinShow"
+import Trending from "./coin/Trending"
 import useAxios from '../hooks/useAxios';
 import { coinIndex } from "../api/coin";
 // import SignUpForm from "./SignUpForm/SignUpForm"
@@ -67,28 +67,26 @@ const Home = (props) => {
 		<>
         <Container>
         <div className="box animate fadeInUp one">
+                <div className="divBox">
+                    <div className="heading">
+                       <h1 className="title" style={boldText}>Top Leading Cryptocurrencies</h1>
+                    </div>
+                </div>
+        </div>
+        <div className="box animate fadeInUp one">
         <div className="divBox">
             <div className="heading">
-                <h2>Crypto Watcher</h2>
-                <br /> 
-                <p>CryptoWatcher is a cryptocurrency tracking app that allows you to keep track of all your coins.<br/> You can add and delete any coins you wish to add to your watch list. You can also comment on coins to help your cryptos buddies.</p>
+                {/* <h2>Crypto Watcher</h2> */}
+                <div className="divBox">
+                  <p>CryptoWatcher is a cryptocurrency tracking app that allows you to keep track of all your coins.<br/> You can add and delete any coins you wish to add to your watch list. You can also comment on coins to help your cryptos buddies.</p>
+                </div>
             <div>    
             </div>
             </div>
         </div>
         </div>
-        
-        <div className="box animate fadeInUp one">
-                <div className="divBox">
-                    <div className="heading">
-                        <div>
-                            <h1 className="home-sub">Cryptocurrency Prices by Market Cap</h1>
-                        </div>
-                    </div>
-                </div>
-        </div>
         </Container>
-        <div class="card-group">
+        <div className="box animate fadeInUp one">
 <div class="coin-line">
   <img src={data[0].image} class="img-symbol" alt="..."/>
   <p>{data[0].symbol}</p>

@@ -12,10 +12,11 @@ import SignUp from './components/auth/SignUp'
 import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
-import CoinShow from './components/coin/CoinShow'
+import Trending from './components/coin/Trending'
 import CoinSearch from './components/coin/CoinSearch'
 import CoinIndex from './components/coin/CoinIndex'
-// import WatchList from './components/WatchList/WatchList'
+import WatchList from './components/WatchList/WatchList'
+import CoinDetails from './components/coin/CoinDetails'
 // import { coinIndex } from './api/coin'
 // import CoinDetails from './components/coin/CoinDetails'
 const App = () => {
@@ -79,19 +80,19 @@ const App = () => {
                 <CoinIndex msgAlert={msgAlert} user={user} setUser={setUser} />
               }
         />
-		  <Route
+		  {/* <Route
             path='/coins/:id'
             element={
-                <CoinShow msgAlert={msgAlert} user={user} setUser={setUser} />
+                <CoinShow msgAlert={msgAlert} user={user} setUser={setUser} element={<CoinShow CoinShow={CoinShow} />} />
               }
-        />
+        /> */}
 		<Route
             path='/coins/search/:name'
             element={
                 <CoinSearch msgAlert={msgAlert} user={user} />
               }
         />
-		{/* <Route path="/WatchList" element={<WatchList WatchList={WatchList} />} /> */}
+		<Route path="/WatchList" element={<WatchList WatchList={WatchList} />} />
 		{/* <Route path="/:id" element={<CoinDetails coins={CoinDetails} />} /> */}
 
 		
