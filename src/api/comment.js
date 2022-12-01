@@ -32,7 +32,7 @@ export const updateComment = (user, updatedComment) => {
 		url: `${apiUrl}/comments/${updatedComment._id}`,
 		method: 'PATCH',
 		headers: {
-			Authorization: `Token token=${user.token}`,
+			Authorization: `Token token=${user.user.token}`,
 		},
 		data: { comment: updatedComment }
 	})
@@ -44,7 +44,7 @@ export const deleteComment = (user, commentId) => {
 		url: `${apiUrl}/comments/${commentId}`,
 		method: 'DELETE',
 		headers: {
-			Authorization: `Token token=${user.token}`,
+			Authorization: `Token token=${user.user.token}`,
 		}
 	})
 }

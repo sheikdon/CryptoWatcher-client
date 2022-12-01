@@ -6,10 +6,7 @@ import {  coinShow } from '../../api/coin'
 import { getComment } from '../../api/comment'
 import CommentShow from '../comment/CommentShow'
 import NewCommentModal from '../comment/NewCommentModal'
-// import { getComment } from '../../api/comment'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-
+import EditCommentModal from '../comment/EditCommentModal'
 
 // const imageDisplay = {
 //     width: '50%',
@@ -121,6 +118,14 @@ const CoinShow = (user, msgAlert, setAlert) => {
                         }
                     </Card>
                 </div>
+                <EditCommentModal
+                    user={user}
+                    coin={coin}
+                    show={editModalShow}
+                    msgAlert={msgAlert}
+                    triggerRefresh={() => setUpdated(prev => !prev)}
+                    handleClose={() => setEditModalShow(false)}
+            />
             <NewCommentModal 
                 user={user}
                 coin={coin}
