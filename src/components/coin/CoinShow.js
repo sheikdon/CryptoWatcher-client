@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import React, { useEffect, useState } from 'react' 
 import { Container, Card, Button } from 'react-bootstrap'
 import {  coinShow } from '../../api/coin'
+import { getComment } from '../../api/comment'
 import CommentShow from '../comment/CommentShow'
 import NewCommentModal from '../comment/NewCommentModal'
 // import { getComment } from '../../api/comment'
@@ -40,6 +41,18 @@ const CoinShow = (user, msgAlert, setAlert) => {
 
             })
     }, [])
+    useEffect(() => {
+        getComment(user, id)
+            .then(res => {
+                if (res.data.comments.find(e => e.user === user.user)) {
+                    setCanComment(false)
+                } else {
+                    setCanComment(true)
+                }
+
+                setComments(res.data.comments)
+            })
+    }, [updated])
 
 
 
@@ -96,8 +109,18 @@ const CoinShow = (user, msgAlert, setAlert) => {
                 <h3>All of {coin.name}'s comments:</h3>
             </Container>
             <Container >
-                { commentCards }
-            </Container>
+                <div>
+                <div>{ commentCards }</div>
+                <Card>
+                        {canComment ?
+                            <Button onClick={() => setCommentModalShow(true)} className="m-2" variant="info">
+                                Write {coin.name} a comment!
+                            </Button>
+                            :
+                            null
+                        }
+                    </Card>
+                </div>
             <NewCommentModal 
                 user={user}
                 coin={coin}
@@ -106,6 +129,8 @@ const CoinShow = (user, msgAlert, setAlert) => {
                 triggerRefresh={() => setUpdated(prev => !prev)}
                 handleClose={() => setCommentModalShow(false)}
             />
+            </Container>
+            
         </>
     )
 }

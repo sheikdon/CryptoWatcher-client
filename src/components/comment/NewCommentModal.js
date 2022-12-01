@@ -28,10 +28,11 @@ const NewCommentModal = (props) => {
         createComment(user, coin.id, comment)
             .then(() => handleClose())
             .then(() => {
-
+                console.log('right')
             })
             .then(() => triggerRefresh())
             .catch(() => {
+                console.log('wrong')
 
             })
     }

@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 
 
 const ShowComment = (props) => {
-    const { comment, coin, user} = props
+    const { comment } = props
     console.log('this is the props', props)
 
 
@@ -14,7 +14,7 @@ const ShowComment = (props) => {
         <>
             <Card className="m-2">
                 <Card.Body>
-                    <small>{ comment.comment.comment }</small><br/>
+                   { comment.comment }
                 </Card.Body>
                 <Card.Footer>
                    

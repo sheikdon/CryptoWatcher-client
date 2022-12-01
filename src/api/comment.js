@@ -1,7 +1,16 @@
 import apiUrl from '../apiConfig'
 import axios from 'axios'
 
-
+export const getComment = (user, coinId) => {
+	console.log('index comment')
+	return axios({
+		url: `${apiUrl}/comments/${coinId}`,
+		method: 'GET',
+		headers: {
+			Authorization: `Token token=${user.user.token}`,
+		},
+	})
+}
 
 // CREATE
 export const createComment = (user, coinId, newComment) => {
