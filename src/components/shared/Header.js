@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import { Link } from 'react-router-dom'
-import Search from '../Search'
+
 
 
 const navColor = {
@@ -24,6 +24,11 @@ const navStyle = {
 }
 const authenticatedOptions = (
 	<>
+	<Nav.Link>
+			<Link to='/WatchList' style={linkStyle}>
+				Trending
+			</Link>
+		</Nav.Link>
 		<Nav.Item>
 			<Link to='coins' style={linkStyle} className='m-4'>
 				More Coins
@@ -63,18 +68,6 @@ const alwaysOptions = (
 				Home
 			</Link>
 		</Nav.Link>
-		<>
-		<Nav.Link>
-			<Link to='/WatchList' style={linkStyle}>
-				Trending
-			</Link>
-		</Nav.Link>
-		<Nav.Link>
-			<Link to='/CoinSearch' style={linkStyle}>
-				Search Coins
-			</Link>
-		</Nav.Link>
-	</>
 	</>
 )
 

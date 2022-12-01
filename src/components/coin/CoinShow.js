@@ -1,4 +1,4 @@
-import './CoinShow.css'
+
 import { useParams, useNavigate } from 'react-router-dom'
 import React, { useEffect, useState } from 'react' 
 import { Container, Card, Button } from 'react-bootstrap'
@@ -109,13 +109,6 @@ const CoinShow = (user, msgAlert, setAlert) => {
                 <div>
                 <div>{ commentCards }</div>
                 <Card>
-                        {canComment ?
-                            <Button onClick={() => setCommentModalShow(true)} className="m-2" variant="info">
-                                Write {coin.name} a comment!
-                            </Button>
-                            :
-                            null
-                        }
                     </Card>
                 </div>
                 <EditCommentModal
