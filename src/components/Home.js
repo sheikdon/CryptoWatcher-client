@@ -83,7 +83,7 @@ const Home = (props) => {
                 <div className="divBox">
                     <div className="heading">
                         <div>
-                            <h1 className="coin-line">Top Leading Cryptocurrencies</h1>
+                            <h1 className="Heading" style={boldText}>Top Leading Cryptocurrencies</h1>
                         </div>
                     </div>
                 </div>

@@ -7,7 +7,7 @@ import Search from '../Search'
 
 
 const navColor = {
-	backgroundColor: 'rgb(122, 111, 155)'
+	backgroundColor: 'white'
 }
 
 
@@ -82,7 +82,7 @@ const Header = ({ user }) => (
 	<Navbar style={ navColor } variant='dark' expand='md'>
 		<Navbar.Brand >
             <Link to='/' style={linkStyle}>
-				Crypto Watcher
+			
             </Link>
         </Navbar.Brand>
 		<Navbar.Toggle aria-controls='basic-navbar-nav' />

@@ -100,6 +100,7 @@ const Trending = (props) => {
 
   return (
 <>
+<div className='color'>
 <div className="box animate fadeInUp one">
     <div className='divBox'>
       <div className='heading'>
@@ -109,6 +110,7 @@ const Trending = (props) => {
       </div>
     </div>
 </div>
+
     <div className="box animate fadeInUp one">
         <div className='divBox'>
             <div className='heading'>
@@ -120,6 +122,7 @@ const Trending = (props) => {
             </div>
         </div>
     </div>
+</div>
 </>
   )
 
