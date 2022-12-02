@@ -7,6 +7,7 @@ import CommentShow from '../comment/CommentShow'
 import NewCommentModal from '../comment/NewCommentModal'
 import EditCommentModal from '../comment/EditCommentModal'
 import "./CoinShow.css"
+import dompurify from 'dompurify';
 
 
 // const imageDisplay = {
@@ -100,8 +101,8 @@ const CoinShow = (user, msgAlert, setAlert) => {
             </div>
             <div className='info'>
                 <div className='coin-heading'>
-                    {coin.image ? <img src={coin.image.small} alt='' /> : null}
-                    <p>{coin.name}</p>
+                   <img src={coin.image.small} alt='' />
+                    {/* <p>{coin.name}</p> */}
                     {/* {coin.symbol ? <p>{coin.symbol.toUpperCase()}</p> : null} */}
                 </div>
                 <div className='coin-price'>
@@ -160,7 +161,10 @@ const CoinShow = (user, msgAlert, setAlert) => {
         <div className='content'>
             <div className='about'>
                 <th>About</th>
-                <p>{coin.description.en}</p>
+                <p dangerouslySetInnerHTML={{
+                    __html: dompurify.sanitize(coin.description ? coin.description.en : ''),
+                }}>
+                </p>
                 </div>
         </div>
     </div>
