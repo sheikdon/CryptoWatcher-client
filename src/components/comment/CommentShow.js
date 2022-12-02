@@ -7,7 +7,7 @@ import EditCommentModal from './EditCommentModal'
 
 
 const ShowComment = (props) => {
-    const { comment, coin, user, triggerRefresh } = props
+    const { comment, coin,  user, triggerRefresh } = props
 
     const [editModalShow, setEditModalShow] = useState(false)
     console.log('this is the props', props)
@@ -30,7 +30,7 @@ const ShowComment = (props) => {
             <Card className="m-2">
                 <Card.Body>
                    { comment.comment } 
-           
+
                             
                   
          
