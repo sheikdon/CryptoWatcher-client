@@ -1,4 +1,4 @@
-# CryptoWatcher
+# Crypto Watcher
 ## Intro
 CryptoWatcher is a cryptocurrency tracking app that allows you to keep track of all your coins. You can add and delete any coins you wish to add to your watch list.
 You can also comment on coins to help your cryptos buddies.
