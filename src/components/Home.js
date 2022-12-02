@@ -179,7 +179,7 @@ const Home = (props) => {
 </div>
 </div>
 <div class="d-grid gap-2 col-6 mx-auto">
-<button className='add-btn'>Click to view all!</button>
+<button className='add-btn'>Sign up to view all!</button>
 </div>
 
 <footer>Made By Abdiresac Sheikdon and Abdiaziz Sheikh</footer>			
