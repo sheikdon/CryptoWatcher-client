@@ -28,30 +28,33 @@ const ShowComment = (props) => {
     return (
         <>
             <Card className="m-2">
+                <Card.Header>Comment by: {comment.email}</Card.Header>
                 <Card.Body>
                    { comment.comment } 
-
-                            
-                  
-         
                 </Card.Body>
                 <Card.Footer>
-                  <>
-                                <Button
-                                    className="m-2"
-                                    variant="warning"
-                                    onClick={() => setEditModalShow(true)}
-                                >
-                                    Edit Comment
-                                </Button>
-                                <Button
-                                    className="m-2"
-                                    variant="danger"
-                                    onClick={() => destroyComment()}
-                                >
-                                    Delete Comment
-                                </Button>
-                            </>
+                {
+                    comment.owner  == comment.owner
+                        ?
+                        <>
+                            <Button
+                                className="m-2"
+                                variant="warning"
+                                onClick={() => setEditModalShow(true)}
+                            >
+                                Edit Comment
+                            </Button>
+                            <Button
+                                className="m-2"
+                                variant="danger"
+                                onClick={() => destroyComment()}
+                            >
+                                Delete Comment
+                            </Button>
+                        </>
+                        :
+                        null
+                    }
                 </Card.Footer>
             </Card>
             <EditCommentModal
