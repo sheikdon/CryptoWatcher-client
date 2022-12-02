@@ -15,8 +15,8 @@ import ChangePassword from './components/auth/ChangePassword'
 import CoinShow from './components/coin/CoinShow'
 import CoinIndex from './components/coin/CoinIndex'
 import WatchList from './components/WatchList/WatchList'
-
-
+// import { coinIndex } from './api/coin'
+// import CoinDetails from './components/coin/CoinDetails'
 const App = () => {
 
   const [user, setUser] = useState(null)
@@ -84,7 +84,6 @@ const App = () => {
                 <CoinShow msgAlert={msgAlert} user={user} setUser={setUser} element={<CoinShow CoinShow={CoinShow} />} />
               }
         />
-	
 		<Route path="/WatchList" element={<WatchList WatchList={WatchList} />} />
 		{/* <Route path="/:id" element={<CoinDetails coins={CoinDetails} />} /> */}
 

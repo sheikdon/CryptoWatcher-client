@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import axios from "axios";
 import CoinShow from "./CoinShow";
 import { coinIndex } from "../../api/coin"
-import { Card } from 'react-bootstrap'
+import { Card, Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 
@@ -25,14 +25,23 @@ const CoinIndex = ( user, msgAlert) => {
     }
 
     const coinCards = allCoins.map(coin => (
-        <Card key={ coin.id } style={{ width: '30%', margin: 5 }}>
-            <Card.Header>{ coin.name }</Card.Header>
-            <Card.Body>
-                <Card.Text>
-                    <Link to={ `/coins/${coin.id}` }>View { coin.name }</Link>
-                </Card.Text>
-            </Card.Body>
-        </Card>
+    <>
+    <Container>
+    <div className="box animate fadeInUp one">
+    <div class='coin-line'>
+        <img src={coin.image} class="img-symbol" alt="..."/>
+            <div class="card-body"> #{coin.market_cap_rank}: { coin.name }</div>
+            
+            <div class="card-body">
+                <div class="card-text">
+                <h3>Current Price: ${coin.current_price}</h3>
+                    <Link to={ `/coins/${coin.id}` } style={{ width: '30%', margin: 5 }}>View { coin.name }</Link>
+                </div>
+            </div>
+    </div>
+    </div>
+    </Container>
+   </>
     ))
 
     return (
