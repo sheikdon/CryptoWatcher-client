@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 
 const navColor = {
-	backgroundColor: 'white'
+	backgroundColor: 'white',
 }
 
 
@@ -16,19 +16,13 @@ const linkStyle = {
     textDecoration: 'none'
 }
 
-const navStyle = {
-	paddingRight: '14px',
-	display: 'flex',
-	flexFlow: 'row wrap',
-	color: 'red'
-}
 const authenticatedOptions = (
 	<>
-	<Nav.Link>
+	<Nav.Item>
 			<Link to='/WatchList' style={linkStyle}>
 				Trending
 			</Link>
-		</Nav.Link>
+		</Nav.Item>
 		<Nav.Item>
 			<Link to='coins' style={linkStyle} className='m-4'>
 				More Coins
@@ -63,11 +57,11 @@ const unauthenticatedOptions = (
 
 const alwaysOptions = (
 	<>
-		<Nav.Link>
-			<Link to='/' style={linkStyle} >
+		<Nav.Item>
+			<Link to='/' style={linkStyle}  className='m-4'>
 				Home
 			</Link>
-		</Nav.Link>
+		</Nav.Item>
 	</>
 )
 

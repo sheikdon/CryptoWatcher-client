@@ -79,7 +79,7 @@ const Home = (props) => {
             <div className="heading">
                 {/* <h2>Crypto Watcher</h2> */}
                 <div className="divBox">
-                  <p>CryptoWatcher is a cryptocurrency tracking app that allows you to keep track of all your coins.<br/> You can add and delete any coins you wish to add to your watch list. You can also comment on coins to help your cryptos buddies.</p>
+                  <p>CryptoWatcher is a cryptocurrency tracking app that allows you to keep track of all your coins.<br/> You can view top 150 crypto coins. You can also comment on coins to help your cryptos buddies.</p>
                 </div>
             <div>    
             </div>
