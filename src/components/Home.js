@@ -1,13 +1,13 @@
 import axios from "axios"
 import React, { useState, useEffect } from "react"
 import { Container, Card  } from "react-bootstrap"
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link  } from 'react-router-dom'
+
 import Trending from "./coin/Trending"
 import useAxios from '../hooks/useAxios';
 import { coinIndex } from "../api/coin";
 // import SignUpForm from "./SignUpForm/SignUpForm"
 // import Search from "./Search/Search"
-import { Link } from 'react-router-dom'
 
 
 const cardHeader = {
@@ -180,10 +180,8 @@ const Home = (props) => {
 </div>
 </div>
 <div class="d-grid gap-2 col-6 mx-auto">
-
 <button className='add-btn'><Link to='sign-up'>Sign up to view More!!</Link> or <Link to='sign-in'>Sign in</Link></button>
-
-
+</div>
 
 <footer>Made By Abdiresac Sheikdon and Abdiaziz Sheikh</footer>			
 

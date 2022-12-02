@@ -39,14 +39,14 @@ const ShowComment = (props) => {
                         <>
                             <Button
                                 className="m-2"
-                                variant="warning"
+                                variant="light"
                                 onClick={() => setEditModalShow(true)}
                             >
                                 Edit Comment
                             </Button>
                             <Button
                                 className="m-2"
-                                variant="danger"
+                                variant="light"
                                 onClick={() => destroyComment()}
                             >
                                 Delete Comment

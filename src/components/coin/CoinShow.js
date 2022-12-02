@@ -170,7 +170,7 @@ const CoinShow = (user, msgAlert, setAlert) => {
     </div>
                 <Card.Footer>
                     <Button onClick={() => setCommentModalShow(true)}
-                        className="m-2" variant="info"
+                        className="m-2" variant="dark"
                     >
                         Give {coin.name} a comment!
                     </Button>
