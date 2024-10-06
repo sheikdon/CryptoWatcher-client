@@ -6,6 +6,7 @@ import axios from "axios"
 import Trending from '../coin/Trending';
 
 
+
 const WatchList = (props) => {
   console.log('props in home', props)
 	const [data, setData] = useState([])

@@ -26,9 +26,10 @@ const NewCommentModal = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         createComment(user, coin.id, comment)
+            
             .then(() => handleClose())
             .then(() => {
-                console.log('right')
+                console.log('right', coin.id, user, comment)
             })
             .then(() => triggerRefresh())
             .catch(() => {

@@ -1,7 +1,8 @@
 import axios from "axios"
 import React, { useState, useEffect } from "react"
 import { Container, Card  } from "react-bootstrap"
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link  } from 'react-router-dom'
+
 import Trending from "./coin/Trending"
 import useAxios from '../hooks/useAxios';
 import { coinIndex } from "../api/coin";
@@ -78,7 +79,7 @@ const Home = (props) => {
             <div className="heading">
                 {/* <h2>Crypto Watcher</h2> */}
                 <div className="divBox">
-                  <p>CryptoWatcher is a cryptocurrency tracking app that allows you to keep track of all your coins.<br/> You can add and delete any coins you wish to add to your watch list. You can also comment on coins to help your cryptos buddies.</p>
+                  <p>CryptoWatcher is a cryptocurrency tracking app that allows you to keep track of all your coins.<br/> You can view top 150 crypto coins. You can also comment on coins to help your cryptos buddies.</p>
                 </div>
             <div>    
             </div>
@@ -179,7 +180,7 @@ const Home = (props) => {
 </div>
 </div>
 <div class="d-grid gap-2 col-6 mx-auto">
-<button className='add-btn'>Sign up to view all!</button>
+<button className='add-btn'><Link to='sign-up'>Sign up to view More!!</Link> or <Link to='sign-in'>Sign in</Link></button>
 </div>
 
 <footer>Made By Abdiresac Sheikdon and Abdiaziz Sheikh</footer>			
